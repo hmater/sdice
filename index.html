@@ -27,7 +27,7 @@
 		.cubo .cara4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(100px); }
 		.cubo .cara5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px); }
 		.cubo .cara6 { -webkit-transform: rotateX(-90deg) translateZ(100px);                }
-
+		/*
 		.cubo .cara1 { -ms-transform: translateZ(100px);                                }
 		.cubo .cara2 { -ms-transform: rotateY(90deg)  translateZ(100px);                }
 		.cubo .cara3 { -ms-transform: rotateY(90deg)  rotateX(90deg) translateZ(100px); }
@@ -41,7 +41,7 @@
 		.cubo .cara4 { transform: rotateY(180deg) rotateZ(90deg) translateZ(100px); }
 		.cubo .cara5 { transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px); }
 		.cubo .cara6 { transform: rotateX(-90deg) translateZ(100px);                }
-
+		*/
 
 		#contenedor{
 		    width: 200px;
@@ -56,7 +56,7 @@
  			right: 0;
 
 		    -webkit-perspective:500px;	
-		    perspective:500px;
+		    /*perspective:500px;*/
 
 			}
 
@@ -94,7 +94,7 @@
 			    } 
 			}
 
-	/*///////////////////////////////////////////////////////////////////////*/
+	/*///////////////////////////////////////////////////////////////////////
 			@keyframes rotacubo {
 			    0% {    
 			    -ms-transform: rotateX(0) rotateY(0);
@@ -137,32 +137,32 @@
 			    transform: rotateX(0) rotateY(0);       
 			    } 
 			}
-	/*///////////////////////////////////////////////////////////////////////*/
+	///////////////////////////////////////////////////////////////////////*/
 	
 		.stop {
 	    -webkit-animation: stopcubo 1s infinite linear; 
-	    animation: stopcubo 1s infinite linear; 
+	    /*animation: stopcubo 1s infinite linear; */
 	    -webkit-transform-style: preserve-3d;
-	    transform-style: preserve-3d;
+	   /* transform-style: preserve-3d;*/
 	    -webkit-transform-origin: 100px 100px 0;
-	    transform-origin: 100px 100px 0;
+	    /*transform-origin: 100px 100px 0;*/
 	  	}	
 
 	  .fast {
 	    -webkit-animation: rotafast 1s infinite linear;
 	    -webkit-transform-style: preserve-3d;
 	    -webkit-transform-origin: 100px 100px 0;
-	    animation: rotafast 1s infinite linear;
+	   /* animation: rotafast 1s infinite linear;
 	    transform-style: preserve-3d;
-	    transform-origin: 100px 100px 0;
+	    transform-origin: 100px 100px 0;*/
 	  }
 	  .slow {
 	  	-webkit-animation: rotacubo 15s infinite linear;
-	    -webkittransform-style: preserve-3d;
-	    -webkittransform-origin: 100px 100px 0;
-	    animation: rotacubo 15s infinite linear;
+	    -webkit-transform-style: preserve-3d;
+	    -webkit-transform-origin: 100px 100px 0;
+	    /*animation: rotacubo 15s infinite linear;
 	    transform-style: preserve-3d;
-	    transform-origin: 100px 100px 0;
+	    transform-origin: 100px 100px 0;*/
 	  }
 	  .cara1{
 	  	background-image: url('caras/5.jpg');
