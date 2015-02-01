@@ -41,6 +41,7 @@
  			right: 0;
 
 		    -webkit-perspective:500px;	
+		    perspective:500px;
 
 			}
 
@@ -78,22 +79,58 @@
 			    } 
 			}
 
+	/*///////////////////////////////////////////////////////////////////////*/
+			@keyframes rotacubo {
+			    0% {    
+			    transform: rotateX(0) rotateY(0);           
+			    } 
+			    50% {    
+			    transform: rotateX(180deg) rotateY(180deg);           
+			    }       
+			    100% {        
+			    transform: rotateX(360deg) rotateY(360deg);       
+			    } 
+			}
+			@keyframes rotafast {
+			    0% {    
+			    transform: rotateX(0) rotateY(0);           
+			    } 
+			    50% {    
+			    transform: rotateX(180deg) rotateY(180deg);           
+			    }       
+			    100% {        
+			    transform: rotateX(360deg) rotateY(360deg);       
+			    } 
+			}
+			@keyframes stopcubo {
+			    0% {    
+			    transform: rotateX(0) rotateY(0);           
+			    } 
+			    50% {    
+			    transform: rotateX(0) rotateY(0);           
+			    }       
+			    100% {        
+			    transform: rotateX(0) rotateY(0);       
+			    } 
+			}
+	/*///////////////////////////////////////////////////////////////////////*/
+	
 		.stop {
-	    -webkit-animation-name: stopcubo;
-	    -webkit-animation-timing-function: linear;
-	    -webkit-animation-iteration-count: infinite;
+	    -webkit-animation: stopcubo 1s infinite linear; 
+	    animation: stopcubo 1s infinite linear; 
 	    transform-style: preserve-3d;
 	    transform-origin: 100px 100px 0;
 	  }	
 
 	  .fast {
 	    -webkit-animation: rotafast 1s infinite linear;
-
+	    animation: rotafast 1s infinite linear;
 	    transform-style: preserve-3d;
 	    transform-origin: 100px 100px 0;
 	  }
 	  .slow {
 	  	-webkit-animation: rotacubo 15s infinite linear;
+	  	animation: rotacubo 15s infinite linear;
 	    transform-style: preserve-3d;
 	    transform-origin: 100px 100px 0;
 	  }
@@ -125,7 +162,7 @@
 </head>
 <body id="body">
 	
-		<div id="contenedor" onTouchStart="resultado()">
+		<div id="contenedor" onclick="resultado()">
 			<div id="cubo" class="cubo slow">
 				<div id='1' class="cara1 caras"></div>
 				<div id='2' class="cara2 caras"></div>
